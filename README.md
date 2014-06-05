@@ -30,6 +30,14 @@ $ ls .packup/
 first.zip
 second.zip
 third.zip
+$ touch first/a.txt
+Compressing first
+updating: first/ (stored 0%)
+  adding: first/a.txt (stored 0%)
+Compressing second
+Archive is current
+Compressing third
+Archive is current
 ```
 
 # REQUIREMENTS
