@@ -15,6 +15,23 @@ The contents of `.packup` can be then [rsync](http://en.wikipedia.org/wiki/Rsync
 
 So you end up having your backup data well accessible on your local machine and nicely zipped on your backup drive.
 
+# EXAMPLE
+
+```
+$ ls
+first
+second 
+third
+$ packup.sh
+Compressing first
+Compressing second
+Compressing third
+$ ls .packup/
+first.zip
+second.zip
+third.zip
+```
+
 # REQUIREMENTS
 
 - bash
