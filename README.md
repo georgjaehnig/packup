@@ -8,7 +8,7 @@ will in the current directory:
 - create a new directory `.packup` 
 - iterate over all subdirectories
     - zip them if they:
-        - do not exist as a zip file yet
-		    - changed between the last run.
+        - do not exist as a zip file yet or
+        - changed between the last run.
     
 
