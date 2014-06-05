@@ -11,6 +11,6 @@ will in the current directory:
         - do not exist as a zip file yet or
         - changed between the last run.
     
-The contents of `.packup` can be then `[rsync](http://en.wikipedia.org/wiki/Rsync)`-ed with a backup drive.
+The contents of `.packup` can be then [rsync](http://en.wikipedia.org/wiki/Rsync)-ed with a backup drive.
 
 So you end up having your backup data well accessible on your local machine and nicely zipped on your backup drive.
