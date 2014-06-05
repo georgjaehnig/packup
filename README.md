@@ -5,7 +5,7 @@
 `$ packup.sh`
 
 will in the current directory:
-- create a new directory `.packup` 
+- create a new directory `.packup` (if not existing yet) 
 - iterate over all subdirectories
     - zip them into `.packup` if they:
         - do not exist as a zip file yet or
