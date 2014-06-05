@@ -17,4 +17,5 @@ So you end up having your backup data well accessible on your local machine and 
 
 # REQUIREMENTS
 
+- bash
 - A `zip` program understanding the `--filesync` option. 
