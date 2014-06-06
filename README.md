@@ -28,7 +28,7 @@ remove_prefix=/home/johndoe/
 
 Change to the downloaded `packup/` directory and simply call:
 ```
-packup
+./packup
 ```
 
 For clarification, we assume the following directory structure:
