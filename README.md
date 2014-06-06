@@ -2,7 +2,7 @@
 
 In the given paths, all directories on the first level will be backed (packed) up as one zip file and saved locally into `~/.packup`. From there, they can be easily synced to any backup device, for example using [rsync](http://en.wikipedia.org/wiki/Rsync).
 
-**packup** will use `zip`'s `--filesync` option, only adding newer files to the zip file, and deleting non-existing ones.
+**packup** uses `zip`'s `--filesync` option, only adding newer files to the zip file, and deleting non-existing ones.
 
 # INSTALL
 
