@@ -20,9 +20,6 @@ fi
 # Process remove_prefix to make it suitable for usage with sed
 remove_prefix_escaped=`echo $remove_prefix | sed 's/\//\\\\\\//g'`
 
-# Remeber current directory
-current_dir=$(pwd)
-
 # Iterate over all paths_to_packup
 for path in ${paths_to_packup[@]}
 do
@@ -45,4 +42,3 @@ do
 		zip -r --filesync $packup_dir/$path_without_prefix/$dir.zip $dir
 	done
 done
-cd $current_dir
