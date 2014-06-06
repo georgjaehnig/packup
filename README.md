@@ -31,7 +31,7 @@ Change to the downloaded `packup/` directory and simply call:
 ./packup
 ```
 
-For clarification, we assume the following directory structure:
+Given for example the following directory structure ...
 ```
 /home/johndoe/code/myblog
 /home/johndoe/code/myblog/css
@@ -41,7 +41,7 @@ For clarification, we assume the following directory structure:
 /home/johndoe/texts/novels
 ```
 
-**packup** will create the following archives (and directories, if needed):
+... **packup** will create the following archives (and directories, if needed):
 ```
 ~/.packup/code/myblog.zip
 ~/.packup/code/mytwitterclone.zip
