@@ -1,0 +1,6 @@
+paths_to_packup=(
+/home/johndoe/code
+/home/johndoe/texts
+)
+
+remove_prefix=/home/johndoe/
