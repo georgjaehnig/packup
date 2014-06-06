@@ -49,7 +49,7 @@ For clarification, we assume the following directory structure:
 ~/.packup/texts/novels.zip
 ```
 
-On a later run, the archives will only be touched if the content of their corresponding directory has changed (using `zip`'s `--filesync` option).
+On a later run, the archives will only be touched if the content of their corresponding directory has changed (using `zip`'s `--filesync` option). Thus, a following `rsync` call will omit these archives.
     
 # REQUIREMENTS
 
