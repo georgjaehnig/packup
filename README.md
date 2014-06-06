@@ -1,6 +1,6 @@
 **packup** allows you to create zipped backups of multiple paths with one command call. It is written in [bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29).
 
-In the given paths, all directories on the first level will be backed (packed) up into a zip file each and saved locally into `~/.packup`. From there, they can be easily synced to any backup device, for example using [rsync](http://en.wikipedia.org/wiki/Rsync). (And you also will have a zipped backup copy on your local machine, too.) 
+In the given paths, all directories on the first level will be backed (packed) up into a zip file each and saved locally into `~/.packup`. From there, they can be easily synced to any backup device, for example using [rsync](http://en.wikipedia.org/wiki/Rsync).
 
 **packup** uses `zip`'s `--filesync` option, only adding newer files to the zip file, and deleting non-existing ones.
 
