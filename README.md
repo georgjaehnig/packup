@@ -1,45 +1,59 @@
-**packup** allows you to create zipped backups, only adding newer files.
+**packup** allows you to create zipped backups of multiple paths with one command call. 
 
-# SYNOPSIS
+In the given paths, all directories on the first level will be backed (packed) up as one zip file and saved locally into `~/.packup`. From there, they can be easily synced to any backup device, for example using [rsync](http://en.wikipedia.org/wiki/Rsync).
 
-`$ packup.sh`
+**packup** will use `zip`'s `--filesync` functionality, only adding newer files to the zip file, and deleting non-existing ones.
 
-will in the current directory:
-- create a new directory `.packup` (if not existing yet) 
-- iterate over all subdirectories
-    - zip them into `.packup` if they:
-        - do not exist as a zip file yet or
-        - changed since the last run.
+# INSTALL
+
+- Copy `packuprc.example` to your home directory as `.packuprc`.
+
+## Editing .packuprc
+
+In the variable `paths_to_packup`, list all your paths that contain direcories to be packed up. For instance:
+
+```
+paths_to_packup=(
+/home/johndoe/code
+/home/johndoe/texts
+)
+```
+
+Additionally, specify which prefix of that given paths can be dropped when creating the subdirs in `.packup`, e.g.:
+```
+remove_prefix=/home/johndoe/
+```
+
+# USAGE
+
+Change to the downloaded `packup` directory and simply call:
+```
+packup
+```
+
+For clarification, we assume the following directory structure:
+```
+/home/johndoe/code/myblog
+/home/johndoe/code/myblog/css
+/home/johndoe/code/myblog/js
+/home/johndoe/code/mytwitterclone
+/home/johndoe/texts/letters
+/home/johndoe/texts/novels
+```
+
+**packup** will create the following archives (and direcories, if needed):
+```
+~/.packup/code/myblog.zip
+~/.packup/code/mytwitterclone.zip
+~/.packup/texts/letters.zip
+~/.packup/texts/novels.zip
+```
+
+On a later run, the archives will only be touched if they
+
+- did not exist before or
+- the content of the corresponding directory has changed.
     
-The contents of `.packup` can be then [rsync](http://en.wikipedia.org/wiki/Rsync)-ed with a backup drive.
-
-So you end up having your backup data well accessible on your local machine and nicely zipped on your backup drive.
-
-# EXAMPLE
-
-```
-$ ls
-first
-second 
-third
-$ packup.sh
-Compressing first
-Compressing second
-Compressing third
-$ ls .packup/
-first.zip
-second.zip
-third.zip
-$ touch first/a.txt
-Compressing first
-updating: first/ (stored 0%)
-  adding: first/a.txt (stored 0%)
-Compressing second
-Archive is current
-Compressing third
-Archive is current
-```
-
 # REQUIREMENTS
 
 - bash
