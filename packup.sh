@@ -20,11 +20,15 @@ fi
 # Process remove_prefix to make it suitable for usage with sed
 remove_prefix_escaped=`echo $remove_prefix | sed 's/\//\\\\\\//g'`
 
+# Remeber current directory
+current_dir=$(pwd)
+
 # Iterate over all paths_to_packup
 for path in ${paths_to_packup[@]}
 do
 
-	echo "Packing up $path"
+	echo "Packing up directories in $path"
+	cd $path
 
 	# remove prefix
 	path_without_prefix=`echo $path | sed "s/$remove_prefix_escaped//"`
@@ -33,10 +37,12 @@ do
 	mkdir -p $packup_dir/$path_without_prefix
 
 	# Find all directories to packup
-	find $path -type d -maxdepth 1 -mindepth 1 | while read dir; do
-		echo -e "\tCompressing $dir"
+
+	find * -type d -maxdepth 0  | while read dir; do
+		echo -e "Compressing $dir"
 		dir_without_prefix=`echo $dir | sed "s/$remove_prefix_escaped//"`
 		# Compress them into their packup directory
-		zip -r --filesync $packup_dir/$dir_without_prefix.zip $dir
+		zip -r --filesync $packup_dir/$path_without_prefix/$dir.zip $dir
 	done
 done
+cd $current_dir
