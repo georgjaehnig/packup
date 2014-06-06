@@ -1,6 +1,6 @@
 **packup** allows you to create zipped backups of multiple paths with one command call. 
 
-In the given paths, all directories on the first level will be backed (packed) up as one zip file and saved locally into `~/.packup`. From there, they can be easily synced to any backup device, for example using [rsync](http://en.wikipedia.org/wiki/Rsync).
+In the given paths, all directories on the first level will be backed (packed) up into a zip file each and saved locally into `~/.packup`. From there, they can be easily synced to any backup device, for example using [rsync](http://en.wikipedia.org/wiki/Rsync). (And you also will have a zipped backup copy on your local machine, too.) 
 
 **packup** uses `zip`'s `--filesync` option, only adding newer files to the zip file, and deleting non-existing ones.
 
@@ -10,7 +10,7 @@ In the given paths, all directories on the first level will be backed (packed) u
 
 ## Editing .packuprc
 
-In the variable `paths_to_packup`, list all your paths that contain direcories to be packed up. For instance:
+In the variable `paths_to_packup`, list all your paths that contain directories to be packed up. For instance:
 
 ```
 paths_to_packup=(
@@ -49,7 +49,7 @@ Given for example the following directory structure ...
 ~/.packup/texts/novels.zip
 ```
 
-On a later run, the archives will only be touched if the content of their corresponding directory has changed (using `zip`'s `--filesync` option). Thus, a following `rsync` call will omit these archives.
+On a later run, the archives will only be touched if the content of their corresponding directory has changed (using `zip`'s `--filesync` option). Thus, if no change happened, a following `rsync` call will omit these archives.
     
 # REQUIREMENTS
 
