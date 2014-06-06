@@ -2,7 +2,7 @@
 
 In the given paths, all directories on the first level will be backed (packed) up as one zip file and saved locally into `~/.packup`. From there, they can be easily synced to any backup device, for example using [rsync](http://en.wikipedia.org/wiki/Rsync).
 
-**packup** will use `zip`'s `--filesync` functionality, only adding newer files to the zip file, and deleting non-existing ones.
+**packup** will use `zip`'s `--filesync` option, only adding newer files to the zip file, and deleting non-existing ones.
 
 # INSTALL
 
@@ -49,10 +49,7 @@ For clarification, we assume the following directory structure:
 ~/.packup/texts/novels.zip
 ```
 
-On a later run, the archives will only be touched if they
-
-- did not exist before or
-- the content of the corresponding directory has changed.
+On a later run, the archives will only be touched if the content of their corresponding directory has changed (using `zip`'s `--filesync` option).
     
 # REQUIREMENTS
 
