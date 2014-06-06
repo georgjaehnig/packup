@@ -26,7 +26,7 @@ remove_prefix=/home/johndoe/
 
 # USAGE
 
-Change to the downloaded `packup` directory and simply call:
+Change to the downloaded `packup/` directory and simply call:
 ```
 packup
 ```
@@ -41,7 +41,7 @@ For clarification, we assume the following directory structure:
 /home/johndoe/texts/novels
 ```
 
-**packup** will create the following archives (and direcories, if needed):
+**packup** will create the following archives (and directories, if needed):
 ```
 ~/.packup/code/myblog.zip
 ~/.packup/code/mytwitterclone.zip
