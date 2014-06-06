@@ -4,6 +4,8 @@ In the given paths, all directories on the first level will be backed (packed) u
 
 **packup** uses `zip`'s `--filesync` option, only adding newer files to the zip file, and deleting non-existing ones.
 
+**CAUTION**: Currently in early alpha stage!
+
 # INSTALL
 
 - Copy `packuprc.example` to your home directory as `.packuprc`.
