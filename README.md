@@ -1,4 +1,4 @@
-![Image](master/img/scheme.png?raw=true)
+![Image](/img/scheme.png?raw=true)
 
 **packup** allows you to create zipped backups of multiple paths with one command call. It is written in [bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29).
 
