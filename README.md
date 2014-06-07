@@ -8,11 +8,25 @@ In the given paths, all directories on the first level will be backed (packed) u
 
 **CAUTION**: Currently in early alpha stage!
 
-# INSTALL
+# Install
 
-- Copy `packuprc.example` to your home directory as `.packuprc`.
+## Requirements
 
-## Editing .packuprc
+- bash
+- A `zip` program understanding the `--filesync` option. 
+
+## Download
+```
+$ git clone https://github.com/georgjaehnig/packup.git`
+$ cd packup
+$ cp packuprc.example ~/.packuprc
+```
+
+## Edit .packuprc
+
+```
+$ vim ~/.packuprc
+```
 
 In the variable `paths_to_packup`, list all your paths that contain directories to be packed up. For instance:
 
@@ -28,11 +42,11 @@ Additionally, specify which prefix of that given paths can be dropped when creat
 remove_prefix=/home/johndoe/
 ```
 
-# USAGE
+# Usage
 
-Change to the downloaded `packup/` directory and simply call:
+Simply call:
 ```
-./packup
+$ ./packup
 ```
 
 Given for example the following directory structure ...
@@ -55,7 +69,3 @@ Given for example the following directory structure ...
 
 On a later run, the archives will only be touched if the content of their corresponding directory has changed (using `zip`'s `--filesync` option). Thus, if no change happened, a following `rsync` call will omit these archives.
     
-# REQUIREMENTS
-
-- bash
-- A `zip` program understanding the `--filesync` option. 
