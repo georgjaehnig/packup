@@ -14,12 +14,12 @@ digraph test123 {
     letters/       
     novels/        
 ",
-		fontname="Courier",
+		fontname="Inconsolata",
 		shape=rectangle
 	];
 	packup [
 		label="packup",
-		fontname="Courier",
+		fontname="Inconsolata",
 		shape=none
 	];
 	target [
@@ -31,7 +31,7 @@ digraph test123 {
     letters.zip       
     novels.zip        
 ",
-		fontname="Courier",
+		fontname="Inconsolata",
 		shape=rectangle
 	];
 	rankdir=LR;
