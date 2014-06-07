@@ -45,6 +45,6 @@ do
 		echo "Compressing $dir"
 		dir_without_prefix=`echo $dir | sed "s/$remove_prefix_escaped//"`
 		# Compress them into their packup directory
-		zip -r --filesync $packup_dir/$path_without_prefix/$dir.zip $dir
+		zip -r --filesync $packup_dir/$path_without_prefix/$dir.zip $dir $extra_zip_options 
 	done
 done

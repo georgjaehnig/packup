@@ -4,3 +4,6 @@ paths_to_packup=(
 )
 
 remove_prefix=/home/johndoe/
+
+# Exclude *.avi files
+extra_zip_options="--exclude *.avi"
