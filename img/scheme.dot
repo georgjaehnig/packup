@@ -1,0 +1,38 @@
+digraph test123 {
+	graph [
+ 		dpi = 100 
+  ]
+	source -> packup -> target;
+	source [
+		label="/home/johndoe/     
+  code/            
+    myblog/        
+      js/          
+      css/         
+    mytwitterclone/
+  texts/           
+    letters/       
+    novels/        
+",
+		fontname="Courier",
+		shape=rectangle
+	];
+	packup [
+		label="packup",
+		fontname="Courier",
+		shape=none
+	];
+	target [
+		label="/home/johndoe/.packup/
+  code/               
+    myblog.zip        
+    mytwitterclone.zip
+  texts/              
+    letters.zip       
+    novels.zip        
+",
+		fontname="Courier",
+		shape=rectangle
+	];
+	rankdir=LR;
+}
